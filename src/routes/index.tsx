@@ -50,11 +50,11 @@ const products = [
 ];
 
 const seasons = [
-  ["01", "Outono", "Aromas quentes e acolhedores."],
-  ["02", "Inverno", "Aromas profundos e envolventes."],
-  ["03", "Primavera", "Aromas florais e delicados."],
-  ["04", "Verão", "Aromas leves e tropicais."],
-];
+  ["01", "Outono", "Aromas quentes e acolhedores.", "outono"],
+  ["02", "Inverno", "Aromas profundos e envolventes.", "inverno"],
+  ["03", "Primavera", "Aromas florais e delicados.", "primavera"],
+  ["04", "Verão", "Aromas leves e tropicais.", "verao"],
+] as const;
 
 function Brand() {
   return (
@@ -130,7 +130,7 @@ function Index() {
                   <h3>{product.name}</h3>
                   <p>{product.aroma}</p>
                 </div>
-                <strong>{product.price}</strong>
+                <strong className="soon-tag">Em breve</strong>
               </div>
             </article>
           ))}

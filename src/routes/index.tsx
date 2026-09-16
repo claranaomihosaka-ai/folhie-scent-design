@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Instagram } from "lucide-react";
+import { ArrowDown, ArrowRight, Instagram, Phone } from "lucide-react";
 import heroImage from "@/assets/folhie-hero.jpg";
 import figoImage from "@/assets/vela-figo-cedro.jpg";
 import bergamotaImage from "@/assets/vela-bergamota.jpg";

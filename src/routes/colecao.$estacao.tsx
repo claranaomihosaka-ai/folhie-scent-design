@@ -74,8 +74,9 @@ export const Route = createFileRoute("/colecao/$estacao")({
 
 function CollectionPage() {
   const collection = Route.useLoaderData();
+  const { estacao } = Route.useParams();
   const others = (Object.entries(collections) as [CollectionSlug, (typeof collections)[CollectionSlug]][]).filter(
-    ([slug]) => slug !== Route.useParams().estacao,
+    ([slug]) => slug !== estacao,
   );
 
   return (

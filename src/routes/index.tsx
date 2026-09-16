@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Instagram } from "lucide-react";
 import heroImage from "@/assets/folhie-hero.jpg";
 import figoImage from "@/assets/vela-figo-cedro.jpg";

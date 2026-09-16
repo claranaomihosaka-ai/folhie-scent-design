@@ -3,7 +3,7 @@ import { ArrowDown, ArrowRight, Instagram } from "lucide-react";
 import heroImage from "@/assets/folhie-hero.jpg";
 import coffeeWhiskyImage from "@/assets/vela-coffee-whisky.jpg";
 import bambooImage from "@/assets/vela-bamboo-dreams.jpg";
-import jasmimImage from "@/assets/vela-jasmim.jpg";
+import capimLimaoImage from "@/assets/vela-capim-limao.jpg";
 import colecoesImage from "@/assets/colecoes-estacoes.jpg";
 import historiaImage from "@/assets/folhie-historia.jpg";
 
@@ -45,7 +45,7 @@ const products = [
     name: "Campim Limão",
     aroma: "Cítrico Aromático • Fresco • Verde • Refrescante • Revigorante",
     price: "R$ 159",
-    image: jasmimImage,
+    image: capimLimaoImage,
   },
 ];
 

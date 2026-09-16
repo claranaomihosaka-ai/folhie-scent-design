@@ -196,6 +196,16 @@ function Index() {
       <footer className="footer">
         <Brand />
         <p>Acenda. Respire. Sinta.</p>
+        <a
+          className="footer-contact"
+          href="https://instagram.com/folhie"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram @folhie"
+        >
+          <Instagram size={16} strokeWidth={1.5} />
+          <span>@folhie</span>
+        </a>
         <p className="copyright">© 2026 FOLHIÊ</p>
       </footer>
     </main>

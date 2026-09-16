@@ -196,16 +196,28 @@ function Index() {
       <footer className="footer">
         <Brand />
         <p>Acenda. Respire. Sinta.</p>
-        <a
-          className="footer-contact"
-          href="https://instagram.com/folhie"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram @folhie"
-        >
-          <Instagram size={16} strokeWidth={1.5} />
-          <span>@folhie</span>
-        </a>
+        <div className="footer-contacts">
+          <a
+            className="footer-contact"
+            href="https://instagram.com/folhie"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram @folhie"
+          >
+            <Instagram size={16} strokeWidth={1.5} />
+            <span>@folhie</span>
+          </a>
+          <a
+            className="footer-contact"
+            href="https://wa.me/5511980456883"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp (11) 98045-6883"
+          >
+            <Phone size={16} strokeWidth={1.5} />
+            <span>(11) 98045-6883</span>
+          </a>
+        </div>
         <p className="copyright">© 2026 FOLHIÊ</p>
       </footer>
     </main>

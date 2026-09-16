@@ -108,6 +108,21 @@ a { color: inherit; text-decoration: none; }
 .product-info h3 { margin: 0 0 .35rem; font-family: var(--font-display); font-size: 1.55rem; font-weight: 500; }
 .product-info p, .product-info strong { margin: 0; font-size: .66rem; letter-spacing: .11em; text-transform: uppercase; color: var(--muted-foreground); }
 .product-info strong { color: var(--foreground); font-weight: 500; padding-top: .45rem; white-space: nowrap; }
+.product-info .soon-tag { align-self: flex-start; padding: .35rem .7rem; border: 1px solid var(--gold); color: var(--gold); font-size: .56rem; letter-spacing: .18em; }
+
+.collection-hero { display: grid; grid-template-columns: 1.06fr .94fr; min-height: calc(100vh - 116px); background: var(--forest); color: var(--primary-foreground); }
+.collection-hero-image { overflow: hidden; }
+.collection-hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.collection-hero-content { padding: clamp(3.5rem, 7vw, 7rem) clamp(2rem, 6vw, 6rem); display: flex; flex-direction: column; justify-content: center; }
+.collection-hero-content .eyebrow { color: var(--gold); }
+.collection-hero-content h1 { margin: 0; font-family: var(--font-display); font-size: clamp(3.6rem, 6vw, 6rem); line-height: .92; font-weight: 400; text-transform: uppercase; letter-spacing: .04em; }
+.collection-hero-tagline { margin: 1.4rem 0 0; font-family: var(--font-display); font-size: 1.4rem; font-style: italic; color: color-mix(in oklab, var(--primary-foreground) 88%, transparent); }
+.collection-hero-description { max-width: 440px; margin: 1.1rem 0 2rem; font-size: .8rem; line-height: 1.9; color: color-mix(in oklab, var(--primary-foreground) 68%, transparent); }
+.soon-badge { width: fit-content; padding: .55rem 1rem; border: 1px solid var(--gold); color: var(--gold); font-size: .58rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.back-link { color: var(--primary-foreground); margin-top: 2.4rem; }
+.collection-card .collection-card-cta { display: inline-flex; align-items: center; gap: .45rem; color: var(--secondary); }
+.season-link { display: inline-flex; align-items: center; gap: .5rem; margin-top: .75rem; font-size: .58rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid color-mix(in oklab, var(--gold) 45%, transparent); padding-bottom: .3rem; transition: opacity .2s ease; }
+.season-link:hover { opacity: .75; }
 
 .collection-section { display: grid; grid-template-columns: 1.06fr .94fr; min-height: 850px; background: var(--forest); color: var(--primary-foreground); }
 .collection-image { min-height: 650px; overflow: hidden; }
@@ -155,6 +170,8 @@ a { color: inherit; text-decoration: none; }
   .product-image-wrap { aspect-ratio: 1 / 1.08; }
   .collection-section { grid-template-columns: 1fr; }
   .collection-image { min-height: 520px; height: 68vh; }
+  .collection-hero { grid-template-columns: 1fr; }
+  .collection-hero-image { max-height: 52vh; }
   .collection-content { padding-block: 5.5rem; }
   .about-section { grid-template-columns: 1fr; }
   .about-image { order: -1; }

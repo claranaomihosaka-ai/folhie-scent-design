@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ColecaoEstacaoRouteImport } from './routes/colecao.$estacao'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ColecaoEstacaoRoute = ColecaoEstacaoRouteImport.update({
+  id: '/colecao/$estacao',
+  path: '/colecao/$estacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/colecao/$estacao': typeof ColecaoEstacaoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/colecao/$estacao': typeof ColecaoEstacaoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/colecao/$estacao': typeof ColecaoEstacaoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/colecao/$estacao'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/colecao/$estacao'
+  id: '__root__' | '/' | '/colecao/$estacao'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ColecaoEstacaoRoute: typeof ColecaoEstacaoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/colecao/$estacao': {
+      id: '/colecao/$estacao'
+      path: '/colecao/$estacao'
+      fullPath: '/colecao/$estacao'
+      preLoaderRoute: typeof ColecaoEstacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ColecaoEstacaoRoute: ColecaoEstacaoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

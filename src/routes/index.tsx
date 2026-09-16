@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Instagram } from "lucide-react";
 import heroImage from "@/assets/folhie-hero.jpg";
 import figoImage from "@/assets/vela-figo-cedro.jpg";
@@ -50,11 +50,11 @@ const products = [
 ];
 
 const seasons = [
-  ["01", "Outono", "Aromas quentes e acolhedores."],
-  ["02", "Inverno", "Aromas profundos e envolventes."],
-  ["03", "Primavera", "Aromas florais e delicados."],
-  ["04", "Verão", "Aromas leves e tropicais."],
-];
+  ["01", "Outono", "Aromas quentes e acolhedores.", "outono"],
+  ["02", "Inverno", "Aromas profundos e envolventes.", "inverno"],
+  ["03", "Primavera", "Aromas florais e delicados.", "primavera"],
+  ["04", "Verão", "Aromas leves e tropicais.", "verao"],
+] as const;
 
 function Brand() {
   return (
@@ -130,7 +130,7 @@ function Index() {
                   <h3>{product.name}</h3>
                   <p>{product.aroma}</p>
                 </div>
-                <strong>{product.price}</strong>
+                <strong className="soon-tag">Em breve</strong>
               </div>
             </article>
           ))}
@@ -154,12 +154,20 @@ function Index() {
             A natureza muda de ritmo — e nossos aromas acompanham cada estação.
           </p>
           <ol className="season-list">
-            {seasons.map(([number, title, description]) => (
+            {seasons.map(([number, title, description, slug]) => (
               <li key={title}>
                 <span>{number}</span>
                 <div>
                   <h3>{title}</h3>
                   <p>{description}</p>
+                  <Link
+                    to="/colecao/$estacao"
+                    params={{ estacao: slug }}
+                    className="season-link"
+                    aria-label={`Ver coleção ${title}`}
+                  >
+                    Ver coleção <ArrowRight size={13} strokeWidth={1.5} />
+                  </Link>
                 </div>
               </li>
             ))}

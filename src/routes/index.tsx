@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Instagram } from "lucide-react";
 import heroImage from "@/assets/folhie-hero.jpg";
-import figoImage from "@/assets/vela-figo-cedro.jpg";
-import bergamotaImage from "@/assets/vela-bergamota.jpg";
+import coffeeWhiskyImage from "@/assets/vela-coffee-whisky.jpg";
+import bambooImage from "@/assets/vela-bamboo-dreams.jpg";
 import jasmimImage from "@/assets/vela-jasmim.jpg";
 import colecoesImage from "@/assets/colecoes-estacoes.jpg";
 import historiaImage from "@/assets/folhie-historia.jpg";
@@ -33,13 +33,13 @@ const products = [
     name: "Coffee and Whisky",
     aroma: "Oriental Gourmand • Intenso • Quente • Envolvente",
     price: "R$ 149",
-    image: figoImage,
+    image: coffeeWhiskyImage,
   },
   {
     name: "Bamboo Dreams",
     aroma: "Floral Amadeirado • Fresco • Verde • Elegante",
     price: "R$ 139",
-    image: bergamotaImage,
+    image: bambooImage,
   },
   {
     name: "Campim Limão",

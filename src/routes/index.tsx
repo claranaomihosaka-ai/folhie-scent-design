@@ -30,20 +30,20 @@ export const Route = createFileRoute("/")({
 
 const products = [
   {
-    name: "Figo & Cedro",
-    aroma: "Frutado · Amadeirado",
+    name: "Coffee and Whisky",
+    aroma: "Oriental Gourmand • Intenso • Quente • Envolvente",
     price: "R$ 149",
     image: figoImage,
   },
   {
-    name: "Flor de Laranjeira",
-    aroma: "Cítrico · Floral",
+    name: "Bamboo Dreams",
+    aroma: "Floral Amadeirado • Fresco • Verde • Elegante",
     price: "R$ 139",
     image: bergamotaImage,
   },
   {
-    name: "Jasmim Noturno",
-    aroma: "Floral · Envolvente",
+    name: "Campim Limão",
+    aroma: "Cítrico Aromático • Fresco • Verde • Refrescante • Revigorante",
     price: "R$ 159",
     image: jasmimImage,
   },

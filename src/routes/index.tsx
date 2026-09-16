@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, Instagram } from "lucide-react";
 import heroImage from "@/assets/folhie-hero.jpg";
 import figoImage from "@/assets/vela-figo-cedro.jpg";
 import bergamotaImage from "@/assets/vela-bergamota.jpg";
@@ -196,6 +196,16 @@ function Index() {
       <footer className="footer">
         <Brand />
         <p>Acenda. Respire. Sinta.</p>
+        <a
+          className="footer-contact"
+          href="https://instagram.com/folhie"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram @folhie"
+        >
+          <Instagram size={16} strokeWidth={1.5} />
+          <span>@folhie</span>
+        </a>
         <p className="copyright">© 2026 FOLHIÊ</p>
       </footer>
     </main>

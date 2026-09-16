@@ -154,12 +154,20 @@ function Index() {
             A natureza muda de ritmo — e nossos aromas acompanham cada estação.
           </p>
           <ol className="season-list">
-            {seasons.map(([number, title, description]) => (
+            {seasons.map(([number, title, description, slug]) => (
               <li key={title}>
                 <span>{number}</span>
                 <div>
                   <h3>{title}</h3>
                   <p>{description}</p>
+                  <Link
+                    to="/colecao/$estacao"
+                    params={{ estacao: slug }}
+                    className="season-link"
+                    aria-label={`Ver coleção ${title}`}
+                  >
+                    Ver coleção <ArrowRight size={13} strokeWidth={1.5} />
+                  </Link>
                 </div>
               </li>
             ))}

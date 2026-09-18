@@ -1,0 +1,6 @@
+# TanStack Start + Nitro. On Netlify, Nitro's `netlify` preset writes the static
+# assets to `dist` and the SSR handler to `.netlify/functions-internal/server`.
+# (`dist/client` is only produced by the Lovable sandbox's Cloudflare build.)
+[build]
+  command = "bun run build"
+  publish = "dist"

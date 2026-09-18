@@ -1,0 +1,6 @@
+# TanStack Start + nitro's Netlify preset emits static assets to `dist/` and the
+# SSR handler to `.netlify/functions-internal/server/server.mjs`, so the publish
+# directory is `dist` (there is no `dist/client`).
+[build]
+  command = "bun run build"
+  publish = "dist"
